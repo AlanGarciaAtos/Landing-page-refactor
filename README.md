@@ -15,6 +15,8 @@ The trainee must refactor the diagnostic assessment using typescript, npm, webpa
 
 ## Steps to create a project with Webpack, Typescript and SASS
 
+> TODO Installed html-loader
+
 ### Part 1 of 3214124 (installing webpack)
 
 1. `git init` and `npm init -y`
@@ -78,11 +80,13 @@ plugins: [
 
 6. In `webpack.config.js` add `const HtmlWebpackPlugin = require('html-webpack-plugin');` Outside of `module.exports = {...}`
 
+7. Now run the server! `npm start`
+
 ### Part 3 of uuuuh (Adding SASS and CSS)
 
 1. It will install a lot of dependencies. `npm install --save-dev style-loader css-loader sass-loader sass`. In a nutshell it will install sass, css and you now you can use it.
 
-2. Add the following code in `webpack.config.js`
+2. Add the following code in `webpack.config.js`. This will get the scss files and turn it into CSS
 
 ```JSON
 module: {
@@ -99,3 +103,13 @@ module: {
   },
 
 ```
+
+3. Create a sass file named `main.scss` in **src**. Add some background color to ensure you added correctly.
+
+4. In the `index.js` write `import './main.scss';` so it can used the scss file.
+
+5. Once again run the server! `npm start`
+
+### Part 4 of hmmm (Typescript)
+
+1. `npm install --save-dev typescript ts-loader`
