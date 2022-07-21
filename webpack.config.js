@@ -1,4 +1,4 @@
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -7,9 +7,32 @@ module.exports = {
     main: './src/index.js',
     // vendor: './src/vendor.js',
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      // title: 'Caching',
+      template: './src/template.html',
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.scss$/i,
+        use: [
+          'style-loader', //3. Inject styles into DOM
+          'css-loader', //2. Turns css into commonjs
+          'sass-loader', //1. Turns sass into css
+        ],
+      },
+    ],
+  },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
   },
   // plugins: [
   //   new HtmlWebpackPlugin({
