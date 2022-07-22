@@ -16,6 +16,7 @@ The trainee must refactor the diagnostic assessment using typescript, npm, webpa
 ## Steps to create a project with Webpack, Typescript and SASS
 
 > TODO Installed html-loader
+> TODO Installed the CSS external, don't inject the css with javascript (mini-css-extract-plugin this is the plugin that maybe I will use later)
 
 ### Part 1 of 3214124 (installing webpack)
 
@@ -113,3 +114,59 @@ module: {
 ### Part 4 of hmmm (Typescript)
 
 1. `npm install --save-dev typescript ts-loader`
+
+2. Outside the **src** folder create a new file named `tsconfig.json`. With the following json
+
+> Maybe this will be changed
+
+```JSON
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node"
+  }
+}
+
+```
+
+3. Add in `webpack.config.js` the following code.
+
+```JSON
+module: {...}, //<- DON'T ADD THIS, Just a reference where you need to add the resolve
+
+resolve: {
+  extensions: ['.ts', '.js', '.tsx'],
+},
+
+```
+
+3. 1 Now to get the typecript files and transpiled it in JS. Add the following JSON inside rules.
+
+```JSON
+
+{
+  test: /\.tsx?$/,
+  use: 'ts-loader',
+  include: [path.resolve(__dirname, 'src')],
+  exclude: /node_modules/,
+},
+
+```
+
+> ADD AN IMAGE WHERE IS THE 3.1
+
+> Note: The extensions named with tsx is for react depending what framework you're using (or you are not using a framework). It doesn't cause a problem if you leave like that.
+
+5. In **src** folder created a typescript file `index.ts`
+
+6. In `webpack.config.js` you will change the entry object.
+
+- Old: `entry: {main: './src/index.js'}`,
+- New: `entry: {main: './src/index.ts'}`,
+
+You only change one letter, **literally**. It's important to change the letter because now webpack knows you're using Typescript and _ts-loader_ will transpiled to JS
