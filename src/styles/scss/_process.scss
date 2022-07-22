@@ -1,0 +1,108 @@
+.process {
+  text-align: center;
+  color: $white-text;
+  margin-top: 4em;
+
+  .container {
+    padding: 1em;
+    background: linear-gradient(
+      90deg,
+      rgba(37, 79, 226, 1) 0%,
+      rgba(143, 210, 253, 1) 100%
+    );
+    border-radius: 15px;
+  }
+
+  &__heading {
+    img {
+      width: 8%;
+      max-width: 1.83em;
+      margin: 2em 0 0.6em 0;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+
+    & > *:not(p, img) {
+      margin-bottom: 2em;
+    }
+
+    h4 {
+      letter-spacing: 5px;
+      border-bottom: 1px solid $white-text;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      word-spacing: 5px;
+      line-height: 2.6rem;
+    }
+  }
+
+  &__title {
+    font-weight: normal;
+  }
+
+  &__cards {
+    & > * {
+      margin-bottom: 3em;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $white-text;
+      padding: 0.8em;
+      border-radius: 8px;
+      border: none;
+      margin: 0 auto;
+      width: 60%;
+      max-width: 12em;
+      cursor: pointer;
+      color: black;
+      font-weight: bold;
+
+      img {
+        flex-basis: 0;
+        width: 16%;
+      }
+
+      &:hover {
+        background-color: #c5c5c5;
+      }
+    }
+  }
+
+  &__card {
+    background-color: rgba($subtitle-gray, $alpha: 0.3);
+    border-radius: 10px;
+    padding: 1em;
+    margin-right: 1em;
+    margin-left: 1em;
+
+    h5,
+    p {
+      margin-bottom: 1.5em;
+    }
+
+    h5 {
+      font-size: 1rem;
+    }
+
+    .process__number__circle {
+      color: black;
+      background-color: $white-text;
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 1em auto;
+      padding: 1rem;
+      border-radius: 50%;
+      width: 27%;
+      max-width: 3em;
+      height: 50%;
+    }
+  }
+}

@@ -13,10 +13,25 @@ The trainee must refactor the diagnostic assessment using typescript, npm, webpa
 • You must use SASS (SCSS) your web application
 • You must use webpack
 
+## Links I found useful
+
+- https://9elements.com/bem-cheat-sheet/
+
+- https://iconmonstr.com/
+
+Not gonna lie I use this xd
+
+- https://cssgradient.io/
+
+## Where I left (links)
+
+- https://dribbble.com/shots/17710485-Every-landing-page-UI-design-Responsive/attachments/12871296?mode=media
+
 ## Steps to create a project with Webpack, Typescript and SASS
 
-> TODO Installed html-loader
+> TODO Installed html-loader ✅
 > TODO Installed the CSS external, don't inject the css with javascript (mini-css-extract-plugin this is the plugin that maybe I will use later)
+> TODO [HMR] Nothing hot updated. updated fast Se actualiza en chinga xd (abrir consola del navegador)
 
 ### Part 1 of 3214124 (installing webpack)
 
@@ -170,3 +185,10 @@ resolve: {
 - New: `entry: {main: './src/index.ts'}`,
 
 You only change one letter, **literally**. It's important to change the letter because now webpack knows you're using Typescript and _ts-loader_ will transpiled to JS
+
+### Part 5 of Extra (Images)
+
+This part is not obligatory. Wait it's kind of obligatory we use images in websites. When we use images webpack doesn't know where are the images ⁽ᵃˡᵗʰᵒᵘᵍʰ ʷᵉ ᵗᵉˡˡ ᵗʰᵉ ˢᵒᵘʳᶜᵉ ᵇᵘᵗ ᵃⁿʸʷʰᵒ, ʷᵉᵇᵖᵃᶜᵏ ˢʰᵉⁿᵃⁿᶦᵍᵃⁿˢ⁾.
+
+1. `npm install --save-dev html-loader`
+2. Add this JSON in `webpack.config.js`

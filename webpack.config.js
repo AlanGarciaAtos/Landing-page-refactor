@@ -29,6 +29,10 @@ module.exports = {
         include: [path.resolve(__dirname, 'src')], //* Add this in readme
         exclude: /node_modules/,
       },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
     ],
   },
   output: {
