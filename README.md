@@ -1,17 +1,17 @@
-# Project Based Learning:
+# ~~Project Based Learning:~~
 
-# Best practices assessments refactor
+# ~~Best practices assessments refactor~~
 
-## Project Overview:
+## ~~Project Overview:~~
 
-The trainee must refactor the diagnostic assessment using typescript, npm, webpack, scss and semantic html, for this case the trainee is required to use Axios for the http requests needed to accomplish the objective of the assessment, also the modal library can be swapped, the trainee can pick the modal library of preference. At the end of the practice the project must be deployed to GitHub Pages
+~~The trainee must refactor the diagnostic assessment using typescript, npm, webpack, scss and semantic html, for this case the trainee is required to use Axios for the http requests needed to accomplish the objective of the assessment, also the modal library can be swapped, the trainee can pick the modal library of preference. At the end of the practice the project must be deployed to GitHub Pages~~
 
-## Standards:
+## ~~Standards:~~
 
-• You must use Typescript
-• You must use Semantic HTML
-• You must use SASS (SCSS) your web application
-• You must use webpack
+• ~~You must use Typescript~~ <br>
+• ~~You must use Semantic HTML~~ <br>
+• ~~You must use SASS (SCSS) your web application~~<br>
+• ~~You must use webpack~~
 
 ## Links I found useful
 
