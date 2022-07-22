@@ -192,3 +192,13 @@ This part is not obligatory. Wait it's kind of obligatory we use images in websi
 
 1. `npm install --save-dev html-loader`
 2. Add this JSON in `webpack.config.js`
+
+```json
+{
+  test: /\.html$/i,
+  loader: 'html-loader',
+},
+
+```
+
+Yeeeeei, you finally installed a lot of things!
